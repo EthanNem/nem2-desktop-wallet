@@ -6,11 +6,11 @@
         <slot />
       </span>
     </div>
-    <div class="clearfix">
+    <!-- <div class="clearfix">
       <span class="form-label-description">
         <slot name="label-description" />
       </span>
-    </div>
+    </div> -->
   </div>
 </template>
 

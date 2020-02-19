@@ -84,7 +84,7 @@
     font-size: 0.16rem;
     padding-left: 0;
     height: @formFieldHeight;
-    line-height: @formFieldHeight; 
+    line-height: @formFieldHeight;
     color: #c1b4b4 !important;
   }
 }
@@ -118,7 +118,7 @@
 // Styles common to all buttons
 .button-style {
   text-align: center;
-  height: @formFieldHeight !important;
+  height: @formFieldHeight  !important;
   display: block;
   width: auto !important;
   padding: 0.08rem 0.3rem;
@@ -146,8 +146,8 @@
 
 .validation-button:hover {
   box-shadow: 0 0 0.1rem @purple;
-  background-color: @purple !important;
-  color: @white !important;
+  background-color: @purple  !important;
+  color: @white  !important;
   opacity: 0.8 !important;
 }
 
@@ -158,7 +158,7 @@
 
 .back-button:hover {
   box-shadow: 0 0 0.1rem @grayLight;
-  background-color: @grayLight !important;
+  background-color: @grayLight  !important;
   color: #333 !important;
   opacity: 0.8 !important;
 }
@@ -189,7 +189,7 @@
 /*************************************************************
  * Containers
  *************************************************************/
- .clearfix {
+.clearfix {
   display: block;
   width: 100%;
   float: left;
@@ -209,31 +209,72 @@
   display: block;
   width: 100%;
   margin-bottom: 0.14rem;
-  
+
   .form-row,
   .full-width-item-container {
     display: block;
-    width: 6rem;
+    width: 9rem;
     clear: both;
     margin-top: 10px;
     margin-bottom: 10px;
 
-    .input-size { width: 6rem; }
-    .select-size { width: 6rem; }
-    .auto-complete-size { width: 6rem; }
-    .textarea-size { width: 6rem; }
+    .input-size {
+      width: 9rem;
+    }
+
+    .select-size {
+      width: 9rem;
+    }
+
+    .auto-complete-size {
+      width: 9rem;
+    }
+
+    .textarea-size {
+      width: 9rem;
+    }
   }
 }
 
 .form-line-container {
-  display: block;
+  display: grid;
   float: left;
   clear: both;
   width: 100%;
-  margin: .25rem 0;
+  grid-template-columns: 1.5rem 9rem;
+  grid-template-rows: 100%;
+  margin-bottom: 0.15rem;
 
   .inline-container {
     display: inline-flex;
+  }
+
+  .sender {
+    padding-top: 0.1rem;
+    font-size: 16px;
+    color:rgba(68,0,78,1);
+    background: rgba(232, 232, 232, 1);
+    border-radius: 10px 0px 0px 10px;
+  }
+
+  .assets {
+    padding-top: 0.1rem;
+  }
+
+  .message {
+    padding-top: 0.2rem;
+  }
+
+  .fee {
+    padding-top: 0.1rem;
+  }
+
+  .max-fee {
+    width: 7rem !important;
+
+    .select-style {
+      width: 6.9rem !important;
+    }
   }
 }
 
@@ -247,47 +288,92 @@
 
 .half-width-item-container {
   .right-item {
-    margin-left: 0.2rem;
+    margin-left: 0.12rem;
+    width: 3.5rem;
+
   }
+
   .input-size {
-    width: 2.9rem;
+    width: 3.5rem;
   }
+
   .select-size {
-    width: 2.9rem;
+    width: 4.5rem;
 
     .ivu-select-dropdown {
-      width: 2.9rem;
+      width: 4.5rem;
       left: 1px !important;
     }
   }
+
   .auto-complete-size {
-    width: 2.9rem;
+    width: 4.4rem;
   }
 }
 
 .full-width-item-container {
   .input-size {
-    width: 6rem;
+    width: 9rem;
   }
+
   .select-size {
-    width: 6rem;
+    width: 9rem;
+    // background-color: red;
   }
+
   .auto-complete-size {
-    width: 6rem;
+    width: 9rem;
   }
+
+  // .ivu-select-selection {
+  //   background-color: red;
+  // }
+
+  .ivu-select-dropdown {
+    width: 8.85rem;
+  }
+
   .textarea-size {
-    width: 6rem;
+    width: 9rem;
+  }
+}
+
+.select-background {
+  .select-size {
+    width: 9rem;
+    background:rgba(232,232,232,0.3);
+  }
+
+  .ivu-select-selection {
+    background:rgba(232,232,232,0.1) !important;
+  }
+
+  .select-style {
+    border: none;
+  }
+}
+
+.input-background {
+  .input-size {
+    width: 9rem;
+    background:rgba(248,248,248,1);
+  }
+
+  .input-style {
+    border: none;
   }
 }
 
 .fixed-full-width-item-container {
-  width: 6rem;
-  display: block;
-  float: left;
-  clear: both;
+  position: absolute;
+  width: 2rem;
+  right: 1.7rem;
+  bottom: 0.05rem;
 
   .centered-button {
     margin: 10px auto;
+    width: 2rem !important;
+    background: rgba(68, 0, 78, 1);
   }
 }
 

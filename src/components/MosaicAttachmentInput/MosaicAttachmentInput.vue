@@ -1,6 +1,6 @@
 <template>
   <div class="form-line-container mosaic-attachment-input">
-    <FormLabel>{{ $t('asset_type') }}</FormLabel>
+    <FormLabel class="assets">转账资产</FormLabel>
     <ValidationObserver v-slot="{ handleSubmit }" tag="div">
       <div class="inline-container">
         <div class="half-width-item-container">

@@ -1,8 +1,8 @@
 <template>
   <div class="form-line-container">
-    <FormLabel>{{ $t('sender') }}</FormLabel>
+    <FormLabel class="sender">FROM</FormLabel>
     <div class="inline-container">
-      <div class="full-width-item-container">
+      <div class="full-width-item-container select-background">
         <Select
           v-model="chosenSigner"
           :placeholder="$t('publicKey')"

@@ -1,6 +1,6 @@
 <template>
   <div class="form-line-container">
-    <FormLabel>{{ $t('message') }}</FormLabel>
+    <FormLabel class="message">设置信息</FormLabel>
     <div class="inline-container">
       <ValidationProvider
         v-slot="{ errors }"

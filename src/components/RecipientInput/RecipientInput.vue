@@ -1,6 +1,6 @@
 <template>
   <div class="form-line-container">
-    <FormLabel>{{ $t('transfer_target') }}</FormLabel>
+    <FormLabel class="sender">TO</FormLabel>
     <ValidationProvider
       v-slot="{ errors }"
       mode="lazy"
@@ -11,7 +11,7 @@
       class="inline-container"
     >
       <ErrorTooltip :errors="errors">
-        <div class="full-width-item-container">
+        <div class="full-width-item-container input-background">
           <input
             v-model="rawValue"
             v-focus

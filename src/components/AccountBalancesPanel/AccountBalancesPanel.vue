@@ -1,6 +1,6 @@
 <template>
   <div class="balances-panel-container">
-    <div class="top_wallet_address radius">
+    <div class="top_wallet_address">
       <div class="wallet_address">
         <span class="address">
           {{ currentWallet ? currentWallet.objects.address.plain() : $t('loading') }}
@@ -10,7 +10,7 @@
           @click="uiHelpers.copyToClipboard(currentWallet.objects.address.plain())" />
       </div>
 
-      <div class="split" />
+      <!-- <div class="split" /> -->
       <div class="XEM_amount overflow_ellipsis">
         <div>{{ networkMosaicTicker }}</div>
         <div class="amount">
@@ -24,10 +24,10 @@
 
     <div class="bottom_account_info radius">
       <div class="mosaicListWrap">
-        <!-- <Spin
+        <Spin
           v-if="!currentWallet || !currentWalletMosaics.length" size="large" fix
           class="absolute"
-        /> -->
+        />
         <MosaicBalanceList :mosaics="currentWalletMosaics" />
       </div>
     </div>
