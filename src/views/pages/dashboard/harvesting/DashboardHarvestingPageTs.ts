@@ -21,12 +21,14 @@ import {AccountsModel} from '@/core/database/entities/AccountsModel'
 import {WalletsModel} from '@/core/database/entities/WalletsModel'
 
 // child components
-// @ts-ignore
+// @ts-ignore nem2-desktop-wallet/src/components/HarvestingTable/HarvestingTable.vue
 import FormTransferTransaction from '@/views/forms/FormTransferTransaction/FormTransferTransaction.vue'
+// @ts-ignore
+import HarvestingTable from '@/components/HarvestingTable/HarvestingTable.vue'
 
 @Component({
   components: {
-    FormTransferTransaction,
+    FormTransferTransaction,HarvestingTable,
   },
   computed: {...mapGetters({
     currentAccount: 'account/currentAccount',

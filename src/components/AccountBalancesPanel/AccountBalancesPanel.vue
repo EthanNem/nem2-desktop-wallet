@@ -24,10 +24,10 @@
 
     <div class="bottom_account_info radius">
       <div class="mosaicListWrap">
-        <Spin
+        <!-- <Spin
           v-if="!currentWallet || !currentWalletMosaics.length" size="large" fix
           class="absolute"
-        />
+        /> -->
         <MosaicBalanceList :mosaics="currentWalletMosaics" />
       </div>
     </div>
