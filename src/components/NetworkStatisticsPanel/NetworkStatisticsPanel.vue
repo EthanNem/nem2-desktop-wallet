@@ -34,7 +34,7 @@
         <div class="title">
           <span class="title_txt">{{ $t('node_amount') }}</span>
         </div>
-        <img src="@/views/resources/img/monitor/transaction.png" />
+        <img src="@/views/resources/img/monitor/point.png" />
         <span class="txt_info">
           <AnimatedNumber v-model="countNodes" />
         </span>
