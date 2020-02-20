@@ -31,13 +31,6 @@
                 :size="'bigger'"
               />
             </div>
-            <!-- <div class="wallet-icons">
-            <span class="wallet-icon">{{ item.isMultisig ? $t('Multisig') : '' }}</span>-->
-            <!-- <span class="wallet-icon">
-            icon-->
-            <!-- @TODO: seed / privateKey -->
-            <!-- </span> -->
-            <!-- </div> -->
           </div>
         </div>
       </div>
