@@ -1,17 +1,18 @@
 <template>
-  <Table height="200" :columns="columns1" :data="data1"></Table>
+  <Table height="190" :columns="columns1" :data="data1"></Table>
 </template>
 
 <script>
 import {Vue, Component} from 'vue-property-decorator'
 import './SelectAccountTable.less'
+import {dashboardImages} from '@/views/resources/Images'
 @Component
 export default class SelectAccountTable extends Vue {
   data() {
     return {
       columns1: [
         {
-          title: "",
+          title: " ",
           key: "",
           width: 100
         },

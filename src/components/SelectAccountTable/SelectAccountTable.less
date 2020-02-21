@@ -1,20 +1,19 @@
 .ivu-table-wrapper {
-    // min-height: 200px;
     max-height: 300px;
+    box-sizing: border-box;
 
     .ivu-table-header {
-        height: 0.35rem;
-        line-height: 0.35;
-        padding-top: 0.1rem;
+        // height: 0.35rem;
+        // line-height: 0.35;
+        // padding-top: 0.05rem;
 
-        // th {
-        //     height: 100%;
-        //     line-height: 0.35;
-        //     padding: 0;
-        // }
         .ivu-table-cell {
             overflow: visible;
         }
+    }
+
+    .ivu-table-wrapper .ivu-table th {
+        height: 100%;
     }
 
     .ivu-table-row {
@@ -25,4 +24,8 @@
     // .ivu-table-header thead tr th {
     //     padding-left: 1.2rem;
     // }
+
+    .ivu-table td, .ivu-table th {
+        height: 0.4rem;
+    }
 }

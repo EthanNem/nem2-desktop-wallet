@@ -21,10 +21,14 @@ import {MnemonicPassPhrase} from 'nem2-hd-wallets'
 import {AccountsModel} from '@/core/database/entities/AccountsModel'
 import {AccountsRepository} from '@/repositories/AccountsRepository'
 import {NotificationType} from '@/core/utils/NotificationType'
+//@ts-ignore
+import ButtonStep from '@/components/ButtonStep/ButtonStep.vue'
 
+import draggable from 'vuedraggable'
 @Component({computed: {...mapGetters({
   currentAccount: 'account/currentAccount',
-})}})
+})},
+components:{draggable,ButtonStep},})
 export default class ImportMnemonicTs extends Vue {
   /**
    * Currently active account
@@ -46,6 +50,8 @@ export default class ImportMnemonicTs extends Vue {
   public formItems = {
     seed: ''
   }
+
+  public handledWords: string[] = []
 
   /**
    * Hook called when the component is mounted

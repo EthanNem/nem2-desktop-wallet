@@ -37,6 +37,8 @@ import SelectAccountTable from '@/components/SelectAccountTable/SelectAccountTab
 import TableTitle from '@/components/TableTitle/TableTitle.vue'
 //@ts-ignore
 import ButtonStep from '@/components/ButtonStep/ButtonStep.vue'
+//@ts-ignore
+import FormTitle from '@/components/FormTitle/FormTitle.vue'
 
 @Component({
   computed: {
@@ -48,7 +50,7 @@ import ButtonStep from '@/components/ButtonStep/ButtonStep.vue'
       currentMnemonic: 'temporary/mnemonic',
     }),
   },
-  components: {MosaicAmountDisplay,SelectAccountTable,TableTitle,ButtonStep},
+  components: {MosaicAmountDisplay,SelectAccountTable,TableTitle,ButtonStep,FormTitle},
 })
 export default class WalletSelectionTs extends Vue {
   /**
