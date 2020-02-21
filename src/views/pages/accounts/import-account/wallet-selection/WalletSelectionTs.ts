@@ -31,6 +31,12 @@ import {NotificationType} from '@/core/utils/NotificationType'
 // child components
 // @ts-ignore
 import MosaicAmountDisplay from '@/components/MosaicAmountDisplay/MosaicAmountDisplay.vue'
+//@ts-ignore
+import SelectAccountTable from '@/components/SelectAccountTable/SelectAccountTable.vue'
+//@ts-ignore
+import TableTitle from '@/components/TableTitle/TableTitle.vue'
+//@ts-ignore
+import ButtonStep from '@/components/ButtonStep/ButtonStep.vue'
 
 @Component({
   computed: {
@@ -42,7 +48,7 @@ import MosaicAmountDisplay from '@/components/MosaicAmountDisplay/MosaicAmountDi
       currentMnemonic: 'temporary/mnemonic',
     }),
   },
-  components: {MosaicAmountDisplay},
+  components: {MosaicAmountDisplay,SelectAccountTable,TableTitle,ButtonStep},
 })
 export default class WalletSelectionTs extends Vue {
   /**

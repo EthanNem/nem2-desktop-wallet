@@ -1,6 +1,13 @@
 <template>
   <div class="choose-wallet-sec" @keyup.enter="submit">
-    <div class="left-container">
+    <TableTitle>选择钱包列表</TableTitle>
+    <SelectAccountTable></SelectAccountTable>
+    <div class="table-footer">
+      <div/>
+      <ButtonStep>上一步</ButtonStep>
+      <ButtonStep>下一步</ButtonStep>
+    </div>
+    <!-- <div class="left-container">
       <div class="dialog-sub-tips">
         {{ $t('Address_to_Interact_With') }}
       </div>
@@ -62,7 +69,7 @@
           {{ $t('Access_My_Wallet') }}
         </button>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
