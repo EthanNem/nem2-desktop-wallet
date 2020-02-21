@@ -2,9 +2,18 @@
   <div class="wallet-switch-container">
     <div class="wallet-switch-header-container">
       <div class="wallet-switch-header-left-container">
-        <h1 class="section-title">{{ $t('Wallet_management') }}</h1>
+        <h1 class="section-title">
+          {{ $t('Wallet_management') }}
+        </h1>
+      </div>
+      <div class="wallet-switch-header-right-container">
+        <span class="back-up pointer">
+          {{ $t('backup_mnemonic') }}
+          <!-- @click="displayMnemonicDialog" -->
+        </span>
       </div>
     </div>
+
     <div class="wallet-switch-body-container scroll">
       <div
         v-for="(item, index) in currentWallets"
@@ -25,11 +34,18 @@
 
           <div class="wallet-tile-lower-container">
             <div class="wallet-amount">
-              <MosaicAmountDisplay
-                :relative-amount="addressesBalances[item.address]"
-                :id="networkMosaic"
-                :size="'bigger'"
-              />
+              <MosaicAmountDisplay :relative-amount="addressesBalances[item.address]"
+                                  :id="networkMosaic"
+                                  :size="'bigger'" />
+            </div>
+            <div class="wallet-icons">
+              <span class="wallet-icon">
+                {{ item.isMultisig ? $t('Multisig') : '' }}
+              </span>
+              <span class="wallet-icon">
+                icon
+                <!-- @TODO: seed / privateKey -->
+              </span>
             </div>
           </div>
         </div>
@@ -37,15 +53,14 @@
     </div>
 
     <div class="wallet-switch-footer-container">
-      <span class="add-wallet pointer" @click="hasAddWalletModal = true">
-        <Icon type="md-add-circle" />{{ $t('button_add_wallet') }}
-      </span>
-      <div class="wallet-switch-header-right-container">
-        <span>
-          <img src="@/views/resources/img/back-up.png" alt="">
-        </span>
-        <span class="back-up pointer">{{ $t('backup_mnemonic') }}</span>
-      </div>
+      <button
+        type="button" 
+        class="button-add-wallet button-style validation-button"
+        @click="hasAddWalletModal = true"
+      >
+        <Icon type="md-add-circle" />
+        &nbsp;{{ $t('button_add_wallet') }}
+      </button>
     </div>
 
     <ModalFormSubWalletCreation
@@ -57,8 +72,8 @@
 </template>
 
 <script lang="ts">
-import { WalletSelectorPanelTs } from "./WalletSelectorPanelTs";
-import "./WalletSelectorPanel.less";
+import {WalletSelectorPanelTs} from './WalletSelectorPanelTs'
+import './WalletSelectorPanel.less'
 
 export default class WalletSelectorPanel extends WalletSelectorPanelTs {}
 </script>
