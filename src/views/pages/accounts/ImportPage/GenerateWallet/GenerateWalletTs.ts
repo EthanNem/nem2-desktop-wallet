@@ -1,12 +1,14 @@
 import {Vue, Component} from 'vue-property-decorator'
-//@ts-ignore
-import SelectAccountTable from '@/components/SelectAccountTable/SelectAccountTable.vue'
-//@ts-ignore
-import TableTitle from '@/components/TableTitle/TableTitle.vue'
+// @ts-ignore
+import RightTipDisplay from '@/components/RightTipDisplay/RightTipDisplay.vue'
 
 @Component({
-    components: {TableTitle,SelectAccountTable}
+  components: {
+    RightTipDisplay,
+  },
 })
-export default class GenerateWalletTs extends Vue {
-
+export default class VerifyMnemonicTs extends Vue {
+  tipContents: string[] = [
+    '助记词如果备份错误，将可能不能找回，请认真核对单词和顺序.',
+  ]
 }
