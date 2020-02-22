@@ -1,12 +1,10 @@
 <template>
   <div class="verify-mnemonic-page-wrapper">
-    verify-mnemonic-page
+    <MnemonicVerification :words="mnemonicWordsList" />
   </div>
 </template>
 
 <script>
-import VerifyMnemonicTs from './VerifyMnemonicTs'
-export default class VerifyMnemonic extends VerifyMnemonicTs {
-
-}
+import VerifyMnemonicTs from "./VerifyMnemonicTs";
+export default class VerifyMnemonic extends VerifyMnemonicTs {}
 </script>

@@ -1,7 +1,6 @@
 <template>
   <div class="import-mnemonic-page-wrapper">
-    import-mnemonic-page
-    <router-view />
+    <ImportMnemonic></ImportMnemonic>
   </div>
 </template>
 

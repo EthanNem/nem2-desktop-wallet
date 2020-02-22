@@ -1,6 +1,13 @@
-import {Vue, Component} from 'vue-property-decorator'
+import { Vue, Component } from 'vue-property-decorator'
+// child components
+// @ts-ignore
+import MnemonicVerification from '@/components/MnemonicVerification/MnemonicVerification.vue'
 
-@Component
+@Component({
+    components: {
+        MnemonicVerification,
+    }
+})
 export default class VerifyMnemonicTs extends Vue {
-
+    mnemonicWordsList = ['qasw','hello','word']
 }
