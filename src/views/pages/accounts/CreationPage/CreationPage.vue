@@ -4,7 +4,6 @@
       <StepBar :current-step="parseInt($route.meta.title, 10)" />
     </div>
     <div class="page-detail-container">
-      页面详情容器
       <router-view />
     </div>
     <div class="button-container">
