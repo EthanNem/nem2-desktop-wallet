@@ -1,7 +1,7 @@
 <template>
   <div class="create-page-wrapper">
     <div class="step-box-container">
-      步骤条容器
+      <StepBar :current-step="parseInt($route.meta.title, 10)" />
     </div>
     <div class="page-detail-container">
       页面详情容器

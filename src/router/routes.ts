@@ -154,35 +154,50 @@ export const routes: AppRoute[] = [
               {
                 path: 'generateMnemonic',
                 name: 'accounts.creation.generateMnemonic',
-                meta: { protected: false },
+                meta: { 
+                  protected: false,
+                  title: '1',
+                },
                 // @ts-ignore
                 component: () => import('@/views/pages/accounts/CreationPage/GenerateMnemonic/GenerateMnemonic.vue'),
               },
               {
                 path: 'backupMnemonic',
                 name: 'accounts.creation.backupMnemonic',
-                meta: { protected: false },
+                meta: {
+                  protected: false,
+                  title: '2',
+                },
                 // @ts-ignore
                 component: () => import('@/views/pages/accounts/CreationPage/BackupMnemonic/BackupMnemonic.vue'),
               },
               {
                 path: 'verifyMnemonic',
                 name: 'accounts.creation.verifyMnemonic',
-                meta: { protected: false },
+                meta: {
+                  protected: false,
+                  title: '3',
+                },
                 // @ts-ignore
                 component: () => import('@/views/pages/accounts/CreationPage/VerifyMnemonic/VerifyMnemonic.vue'),
               },
               {
                 path: 'accountInfo',
                 name: 'accounts.creation.accountInfo',
-                meta: { protected: false },
+                meta: {
+                  protected: false,
+                  title: '4',
+                },
                 // @ts-ignore
                 component: () => import('@/views/pages/accounts/CreationPage/AccountInfo/AccountInfo.vue'),
               },
               {
                 path: 'generateWallet',
                 name: 'accounts.creation.generateWallet',
-                meta: { protected: false },
+                meta: {
+                  protected: false,
+                  title: '5',
+                },
                 // @ts-ignore
                 component: () => import('@/views/pages/accounts/CreationPage/GenerateWallet/GenerateWallet.vue'),
               },
@@ -198,21 +213,30 @@ export const routes: AppRoute[] = [
               {
                 path: 'importMnemonic',
                 name: 'accounts.import.importMnemonic',
-                meta: { protected: false },
+                meta: {
+                  protected: false,
+                  title: '1',
+                },
                 // @ts-ignore
                 component: () => import('@/views/pages/accounts/ImportPage/ImportMnemonic/ImportMnemonic.vue'),
               },
               {
                 path: 'accountInfo',
                 name: 'accounts.import.accountInfo',
-                meta: { protected: false },
+                meta: {
+                  protected: false,
+                  title: '2',
+                },
                 // @ts-ignore
                 component: () => import('@/views/pages/accounts/ImportPage/AccountInfo/AccountInfo.vue'),
               },
               {
                 path: 'generateWallet',
                 name: 'accounts.import.generateWallet',
-                meta: { protected: false },
+                meta: {
+                  protected: false,
+                  title: '3',
+                },
                 // @ts-ignore
                 component: () => import('@/views/pages/accounts/ImportPage/GenerateWallet/GenerateWallet.vue'),
               },
