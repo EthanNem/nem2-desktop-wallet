@@ -21,7 +21,6 @@
           </Select>
         </div>
       </div>
-
       <router-view />
     </div>
     <div class="button-container">
