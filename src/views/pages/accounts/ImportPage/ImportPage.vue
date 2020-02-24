@@ -18,6 +18,9 @@
           </Select>
         </div>
       </div>
+      <!--<div class="page-content-title">
+        验证备份的助记词
+      </div>-->
       <router-view />
     </div>
     <div class="button-container">
