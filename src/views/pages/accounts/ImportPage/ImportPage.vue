@@ -7,7 +7,6 @@
       <!--<div class="page-content-title">
         验证备份的助记词
       </div>-->
-      <div v-if="$route.meta.title.length !== 0" class="page-content-title">{{ $route.meta.title }}</div>
       <router-view />
     </div>
     <div class="button-container">
