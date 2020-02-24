@@ -1,14 +1,12 @@
 <template>
-  <div>
-    <FormWrapper class="account-setting-container">
-      <ValidationObserver v-slot="{ handleSubmit }">
-        <form @keyup.enter="handleSubmit(submit)">
-          <div class="fixed-full-width-item-container">
-            <div class="form-headline">
-              {{ $t('Set_account_password') }}
-            </div>
-          </div>
-          <div class="left-container">
+  <div class="form-account-setting">
+    <div class="title">
+      {{ $t('Set_account_password') }}
+    </div>
+    <div class="form-value">
+      <FormWrapper>
+        <ValidationObserver v-slot="{ handleSubmit }">
+          <form @keyup.enter="handleSubmit(submit)">
             <div class="form-row">
               <div class="label">
                 <FormLabel>{{ $t('Set_seed_hash') }}</FormLabel>
@@ -22,7 +20,6 @@
                 </div>
               </div>
             </div>
-
             <div class="form-row">
               <div class="label">
                 <FormLabel>{{ $t('Set_account_name') }}</FormLabel>
@@ -128,38 +125,9 @@
                 </ValidationProvider>
               </div>
             </div>
-          </div>
-        </form>
-      </ValidationObserver>
-    </FormWrapper>
-
-    <div class="right-container">
-      <div class="warm-tips-title">
-        {{ $t('Warm_tips') }}
-      </div>
-      <div class="warm-tips-text">
-        {{ $t('Set_account_description_tips1') }}
-      </div>
-      <div class="warm-tips-text">
-        {{ $t('Set_account_description_tips2') }}
-      </div>
-         
-      <div class="button-container mt-3">
-        <button
-          type="button"
-          class="button-style back-button" 
-          @click="$router.push({name: 'accounts.login'})"
-        >
-          {{ $t('Previous_step') }}
-        </button>
-        <button
-          type="submit"
-          class="button-style validation-button" 
-          @click="handleSubmit(submit)"
-        >
-          {{ $t('next') }}
-        </button>
-      </div>
+          </form>
+        </ValidationObserver>
+      </FormWrapper>
     </div>
   </div>
 </template>
@@ -171,57 +139,14 @@ export default class FormAccountSetting extends FormAccountSettingTs {}
 
 <style lang="less" scoped>
 @import "../../../views/resources/css/variables.less";
-.account-setting-container {
-  display: inline-block;
-  width: 100%;
-  clear: both;
-  min-height: 1rem;
-  .form-row {
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
+.form-account-setting{
+  .title{
+      font-size: 24px;
+      color: #999999;
+      margin-bottom: 18px;
   }
-  .label {
-    display: inline-block;
-    font-size: @normalFont;
-    text-align: right;
-    width: 100%;
-    margin-right: 25px;
-    margin-top: 10px;
+  .form-value{
+    margin-left: 100px;
   }
-  .value {
-    float: left;
-    font-size: @smallerFont;
-    font-weight: bolder;
-  }
-}
-.warm-tips-title {
-    padding-bottom: 34px;
-    font-weight: 600;
-    color:rgba(51,51,51,1);
-    font-size:20px;
-    font-weight:400;
-  }
-.warm-tips-text {
-    padding-bottom: 10px;
-    font-size:20px;
-    font-weight:400;
-    color:rgba(51,51,51,1);
-}
-.right-container {
-  display: block;
-  position: absolute;
-  width: 5rem;
-  float: left;
-  left: 10.5rem;
-  top: 2.5rem;
-}
-.button-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 200px;
-}
-.input-size{
-  width: 6.3rem;
 }
 </style>

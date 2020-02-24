@@ -1,6 +1,8 @@
 <template>
   <div class="account-info-page-wrapper">
-    <div class="account-info-container" />
+    <div class="account-info-container">
+      <FormAccountSetting />
+    </div>
     <div class="right-tip-container">
       <RightTipDisplay 
         :tip-content="tipContents"
