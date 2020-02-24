@@ -1,7 +1,7 @@
 <template>
   <div class="generate-wallet-page-wrapper">
+    <p>导入钱包</p>
     <div class="import-wallet">
-      <!-- <p>导入钱包</p> -->
       <div class="select-network">
         <div class="title">区块链网络:</div>
         <input type="text" />
