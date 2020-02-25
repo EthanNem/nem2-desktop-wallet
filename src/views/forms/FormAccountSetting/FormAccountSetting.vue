@@ -121,6 +121,24 @@
                 </ValidationProvider>
               </div>
             </div>
+            <div class="form-line-container form-row">
+              <!-- <div class="flex-container mt-3">
+                <button
+                  type="button"
+                  class="button-style back-button" 
+                  @click="$router.back()"
+                >
+                  上一步
+                </button>
+                <button
+                  type="submit"
+                  class="button-style validation-button" 
+                  @click="handleSubmit(submit)"
+                >
+                  下一步
+                </button>
+              </div> -->
+            </div>
           </form>
         </ValidationObserver>
       </FormWrapper>

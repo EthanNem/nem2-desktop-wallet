@@ -3,11 +3,14 @@ import {Vue, Component} from 'vue-property-decorator'
 import RightTipDisplay from '@/components/RightTipDisplay/RightTipDisplay.vue'
 // @ts-ignore
 import FormAccountSetting from '@/views/forms/FormAccountSetting/FormAccountSetting.vue'
+// @ts-ignore
+import ButtonStep from '@/components/ButtonStep/ButtonStep.vue'
 
 @Component({
   components: {
     RightTipDisplay,
     FormAccountSetting,
+    ButtonStep
   },
 })
 export default class AccountInfoTs extends Vue {
